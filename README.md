@@ -18,14 +18,14 @@ Este envoltorio queda fijo en la posición definida con respecto al padre y no g
 npm install react-absolute
 ```
 
-### 2. Importar Absoluted
+Importar Absoluted
 
 ```jsx
 import Absoluted from 'react-absoluted';
 // ...
 ```
 
-### 3. Envolver los elementos
+Envolver los elementos
 ```jsx
 <Absoluted>
   <img src="/images/bubble1.svg" alt="Una imagen con tamaño mayor al viewport"/>
