@@ -33,11 +33,11 @@ Envolver los elementos
 ```
 ## Example
 Elemento img con position absolute.
-!(Bubble 1)[https://github.com/ccencisoj/react-absoluted/blob/main/docs/images/bubble1.gif]
+![Bubble 1](https://github.com/ccencisoj/react-absoluted/blob/main/docs/images/bubble1.gif)
 
 Elemento img con position fixed
-!(Bubble 2)[https://github.com/ccencisoj/react-absoluted/blob/main/docs/images/bubble1.gif]
+![Bubble 2](https://github.com/ccencisoj/react-absoluted/blob/main/docs/images/bubble1.gif)
 
 Elemento img envuelto con Absoluted
-!("Bubble 3")[https://github.com/ccencisoj/react-absoluted/blob/main/docs/images/bubble1.gif]
+!["Bubble 3"](https://github.com/ccencisoj/react-absoluted/blob/main/docs/images/bubble1.gif)
 
