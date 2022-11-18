@@ -32,12 +32,11 @@ Envolver los elementos
 </Absoluted>
 ```
 ## Example
-Elemento img con position absolute.
+Imagen con position absolute.
 ![Bubble 1](https://github.com/ccencisoj/react-absoluted/blob/main/docs/images/bubble1.gif)
 
-Elemento img con position fixed
-![Bubble 2](https://github.com/ccencisoj/react-absoluted/blob/main/docs/images/bubble1.gif)
+Imagen con position fixed
+![Bubble 2](https://github.com/ccencisoj/react-absoluted/blob/main/docs/images/bubble2.gif)
 
-Elemento img envuelto con Absoluted
+Imagen envuelto con Absoluted
 !["Bubble 3"](https://github.com/ccencisoj/react-absoluted/blob/main/docs/images/bubble1.gif)
-
