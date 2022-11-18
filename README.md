@@ -34,7 +34,6 @@ Envolver los elementos
 ## Example
 Elemento img con position absolute.
 
-
 Elemento img con position fixed
 
 
