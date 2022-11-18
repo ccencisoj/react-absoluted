@@ -38,5 +38,5 @@ Imagen con position absolute.
 Imagen con position fixed
 ![Bubble 2](https://github.com/ccencisoj/react-absoluted/blob/main/docs/images/bubble2.gif)
 
-Imagen envuelto con Absoluted
-!["Bubble 3"](https://github.com/ccencisoj/react-absoluted/blob/main/docs/images/bubble1.gif)
+Imagen envuelta con Absoluted
+!["Bubble 3"](https://github.com/ccencisoj/react-absoluted/blob/main/docs/images/bubble3.gif)
