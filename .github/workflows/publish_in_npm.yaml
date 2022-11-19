@@ -7,28 +7,32 @@ on:
 
 jobs: 
   prepare:
+    defaults:
+      run:
+        working-directory: /react-absoluted
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with: 
           node-version: 16
-      - name: Uploading artifact
-        uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v3
         with:
-          name: home
+          name: react-absoluted
           path: .
-  clear:
-    needs: prepare
-    runs-on: ubuntu-latest
-    steps:
-      - name: Downloading artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: home
-          path: .
-      - name: list directory
-        run: ls -a dist
+      - run: pwd
+        
+  # clear:
+  #   needs: prepare
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Downloading artifact
+  #       uses: actions/download-artifact@v3
+  #       with:
+  #         name: home
+  #         path: .
+  #     - name: list directory
+  #       run: ls -a dist
 
   # publish:
   #   needs: clear
