@@ -24,6 +24,8 @@ jobs:
         with:
           name: react-absoluted
           path: .
+      - run: git config --global user.name "ccencisoj"
+      - run: git config --global user.email "bizapro123@gmail.com"
       - run: rm -r docs
       - run: ls -a
       - run: git add .
