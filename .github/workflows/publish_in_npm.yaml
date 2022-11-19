@@ -37,11 +37,6 @@ jobs:
         with:
           name: react-absoluted
           path: .
-      - run: export NPM_EMAIL=bizapro123@gmail.com
-      - run: echo "_auth = $NPM_AUTH_TOKEN" > ~/.npmrc
-      - run: echo "email = $NPM_EMAIL" >> ~/.npmrc
-      - run: echo "@ccencisoj:registry=https://registry.npmjs.org"
-      - name: publish
-        run: npm publish --registry https://registry.npmjs.org
-        env:
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
