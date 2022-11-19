@@ -13,19 +13,27 @@ jobs:
       - uses: actions/setup-node@v3
         with: 
           node-version: 16
+      - uses: actions/upload-artifact@v3
+        with:
+          path: /home/app/
   clear:
     needs: prepare
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/download-artifact@v3
+        with:
+          path: /home/app/
       - name: list directory
         run: ls -a
       - name: delete docs dir
         run: sudo rm -r docs
-
   publish:
     needs: clear
     runs-on: ubuntu-latest
     steps: 
+      - uses: actions/download-artifact@v3
+        with:
+          path: /home/app/
       - name: increment version
         run: sudo npm version patch --no-git-tag-verion
       - name: publish package
