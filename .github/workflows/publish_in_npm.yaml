@@ -16,6 +16,8 @@ jobs:
   clear:
     runs-on: ubuntu-latest
     steps:
+      - name: list directory
+      - run: ls -a
       - name: delete docs dir
         run: sudo rm -r docs
 
