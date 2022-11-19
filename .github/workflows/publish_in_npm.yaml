@@ -7,10 +7,14 @@ jobs:
   registry: 
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - run: npm config ls -l | grep "registry"
+      - run: echo $NAME
+        env: 
+          NAME: cristian
+
+      # - uses: actions/setup-node@v3
+      #   with:
+      #     node-version: 16
+      # - run: npm config ls -l | grep "registry"
   # prepare:
   #   runs-on: ubuntu-latest
   #   steps:
