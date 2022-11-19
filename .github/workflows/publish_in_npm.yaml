@@ -25,6 +25,7 @@ jobs:
           name: react-absoluted
           path: .
       - run: rm -r docs
+      - run: ls -a
       - uses: actions/upload-artifact@v3
         with:
           name: react-absoluted
