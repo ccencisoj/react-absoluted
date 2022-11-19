@@ -9,6 +9,5 @@ jobs:
   delete: 
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout
+      - uses: actions/checkout@main
       - run: ls -a
-
