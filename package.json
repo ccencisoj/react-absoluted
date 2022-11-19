@@ -6,7 +6,12 @@
   "scripts": {
     "build": "babel src --out-dir dist --copy-files"
   },
-  "keywords": ["react", "position", "absolute", "fixed"],
+  "keywords": [
+    "react",
+    "position",
+    "absolute",
+    "fixed"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {

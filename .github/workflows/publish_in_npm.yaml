@@ -1,0 +1,29 @@
+name: publish in npm
+
+on:
+  push:
+    branches:
+      - main
+
+jobs: 
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with: 
+          node-version: 16
+  clear:
+    runs-on: ubuntu-latest
+    steps:
+      - name: delete docs dir
+        run: sudo rm -r docs
+
+  publish:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: increment version
+        run: sudo npm version patch --no-git-tag-verion
+
+      - name: publish package
+        run: sudo npm publish
