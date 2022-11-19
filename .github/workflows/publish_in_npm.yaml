@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v3
         with:
-          name: react-absolute
+          name: react-absoluted
           path: .
       - run: sudo rm -r docs
       - uses: actions/download-artifact@v3
@@ -34,7 +34,7 @@ jobs:
     steps: 
       - uses: actions/download-artifact@v3
         with:
-          name: react-abolute
+          name: react-aboluted
           path: .
       - name: increment version
         run: sudo npm version patch --no-git-tag-verion
