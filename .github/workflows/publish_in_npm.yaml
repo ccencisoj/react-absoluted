@@ -14,6 +14,7 @@ jobs:
         with: 
           node-version: 16
   clear:
+    needs: prepare
     runs-on: ubuntu-latest
     steps:
       - name: list directory
@@ -22,10 +23,10 @@ jobs:
         run: sudo rm -r docs
 
   publish:
+    needs: clear
     runs-on: ubuntu-latest
     steps: 
       - name: increment version
         run: sudo npm version patch --no-git-tag-verion
-
       - name: publish package
         run: sudo npm publish
