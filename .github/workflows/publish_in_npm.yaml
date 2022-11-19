@@ -27,14 +27,8 @@ jobs:
         with:
           name: home
           path: .
-      - name: list home/app/
-        run: ls -a .
       - name: list directory
-        run: ls -a .
-      - name: delete docs dir
-        run: sudo rm -r docs
-      - name: list directory
-        run: ls -a
+        run: ls -a dist
 
   # publish:
   #   needs: clear
