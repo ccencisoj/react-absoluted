@@ -13,23 +13,27 @@ jobs:
       - uses: actions/setup-node@v3
         with: 
           node-version: 16
-      - uses: actions/upload-artifact@v3
+      - name: Uploading artifact
+        uses: actions/upload-artifact@v3
         with:
           name: home
-          path: home/app/
+          path: .
   clear:
+    needs: prepare
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@v3
+      - name: Downloading artifact
+        uses: actions/download-artifact@v3
         with:
           name: home
-          path: home/app/
+          path: .
       - name: list home/app/
         run: ls -a home/app/
       - name: list directory
         run: ls -a
       - name: delete docs dir
         run: sudo rm -r docs
+
   # publish:
   #   needs: clear
   #   runs-on: ubuntu-latest
