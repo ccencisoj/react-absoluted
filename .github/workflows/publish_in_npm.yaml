@@ -18,7 +18,6 @@ jobs:
           name: home
           path: home/app/
   clear:
-    needs: prepare
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v3
