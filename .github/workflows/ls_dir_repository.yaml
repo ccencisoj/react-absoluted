@@ -1,0 +1,13 @@
+name: ls dir repository
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  delete: 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout
+      - run: ls -a
