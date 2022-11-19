@@ -9,6 +9,7 @@ jobs:
   prepare:
     defaults:
       run:
+        shell: bash
         working-directory: /react-absoluted
     runs-on: ubuntu-latest
     steps:
