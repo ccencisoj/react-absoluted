@@ -23,7 +23,7 @@ jobs:
         with:
           name: react-absoluted
           path: .
-      - run: sudo rm -r docs
+      - run: rm -r docs
       - uses: actions/upload-artifact@v3
         with:
           name: react-absoluted
@@ -36,9 +36,7 @@ jobs:
         with:
           name: react-absoluted
           path: .
-      - name: increment version
-        run: sudo npm version patch --no-git-tag-verion
-      - name: publish package
-        run: sudo npm publish
+      - name: publish
+        run: npm publish
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
