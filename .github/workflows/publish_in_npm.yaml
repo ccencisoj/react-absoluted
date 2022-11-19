@@ -15,7 +15,7 @@ jobs:
           node-version: 16
       - uses: actions/upload-artifact@v3
         with:
-          name: my-artifact
+          name: home
           path: home/app/
   clear:
     needs: prepare
@@ -23,21 +23,22 @@ jobs:
     steps:
       - uses: actions/download-artifact@v3
         with:
-          name: my-artifact
+          name: home
+          path: home/app/
       - name: list home/app/
         run: ls -a home/app/
       - name: list directory
         run: ls -a
       - name: delete docs dir
         run: sudo rm -r docs
-  publish:
-    needs: clear
-    runs-on: ubuntu-latest
-    steps: 
-      - uses: actions/download-artifact@v3
-        with:
-          name: my-artifact
-      - name: increment version
-        run: sudo npm version patch --no-git-tag-verion
-      - name: publish package
-        run: sudo npm publish
+  # publish:
+  #   needs: clear
+  #   runs-on: ubuntu-latest
+  #   steps: 
+  #     - uses: actions/download-artifact@v3
+  #       with:
+  #         name: my-artifact
+  #     - name: increment version
+  #       run: sudo npm version patch --no-git-tag-verion
+  #     - name: publish package
+  #       run: sudo npm publish
