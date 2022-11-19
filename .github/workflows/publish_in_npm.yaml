@@ -24,9 +24,9 @@ jobs:
           name: react-absoluted
           path: .
       - run: sudo rm -r docs
-      - uses: actions/download-artifact@v3
+      - uses: actions/upload-artifact@v3
         with:
-          name: react-absolute
+          name: react-absoluted
           path: .
   publish:
     needs: clear
