@@ -4,52 +4,41 @@ on:
     branches:
       - main
 jobs: 
-  registry: 
+  prepare:
     runs-on: ubuntu-latest
     steps:
-      - run: echo $NAME
-        env: 
-          NAME: cristian
-
-      # - uses: actions/setup-node@v3
-      #   with:
-      #     node-version: 16
-      # - run: npm config ls -l | grep "registry"
-  # prepare:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - uses: actions/setup-node@v3
-  #       with: 
-  #         node-version: 16
-  #     - uses: actions/upload-artifact@v3
-  #       with:
-  #         name: react-absoluted
-  #         path: .
-  # clear:
-  #   needs: prepare
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/download-artifact@v3
-  #       with:
-  #         name: react-absoluted
-  #         path: .
-  #     - run: sudo rm -r docs
-  #     - uses: actions/upload-artifact@v3
-  #       with:
-  #         name: react-absoluted
-  #         path: .
-  # publish:
-  #   needs: clear
-  #   runs-on: ubuntu-latest
-  #   steps: 
-  #     - uses: actions/download-artifact@v3
-  #       with:
-  #         name: react-absoluted
-  #         path: .
-  #     - name: increment version
-  #       run: sudo npm version patch --no-git-tag-verion
-  #     - name: login npm
-  #       run: 
-  #     - name: publish package
-  #       run: sudo npm publish
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with: 
+          node-version: 16
+      - uses: actions/upload-artifact@v3
+        with:
+          name: react-absoluted
+          path: .
+  clear:
+    needs: prepare
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: react-absoluted
+          path: .
+      - run: sudo rm -r docs
+      - uses: actions/upload-artifact@v3
+        with:
+          name: react-absoluted
+          path: .
+  publish:
+    needs: clear
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/download-artifact@v3
+        with:
+          name: react-absoluted
+          path: .
+      - name: increment version
+        run: sudo npm version patch --no-git-tag-verion
+      - name: publish package
+        run: sudo npm publish
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
