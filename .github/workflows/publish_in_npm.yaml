@@ -37,6 +37,9 @@ jobs:
         with:
           name: react-absoluted
           path: .
+      - run: export NPM_EMAIL=bizapro123@gmail.com
+      - run: echo "_auth = $NPM_AUTH_TOKEN" > ~/.npmrc
+      - run: echo "email = $NPM_EMAIL" >> ~/.npmrc
       - name: publish
         run: npm publish
         env:
