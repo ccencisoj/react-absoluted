@@ -1,48 +1,42 @@
 name: publish in npm
-
 on:
   push:
     branches:
       - main
-
 jobs: 
   prepare:
-    defaults:
-      run:
-        shell: bash
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with: 
           node-version: 16
-      - run: sudo pwd
       - uses: actions/upload-artifact@v3
         with:
           name: react-absoluted
           path: .
-      - run: sudo pwd
-        
-  # clear:
-  #   needs: prepare
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Downloading artifact
-  #       uses: actions/download-artifact@v3
-  #       with:
-  #         name: home
-  #         path: .
-  #     - name: list directory
-  #       run: ls -a dist
-
-  # publish:
-  #   needs: clear
-  #   runs-on: ubuntu-latest
-  #   steps: 
-  #     - uses: actions/download-artifact@v3
-  #       with:
-  #         name: my-artifact
-  #     - name: increment version
-  #       run: sudo npm version patch --no-git-tag-verion
-  #     - name: publish package
-  #       run: sudo npm publish
+  clear:
+    needs: prepare
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: react-absolute
+          path: .
+      - run: sudo rm -r docs
+      - uses: actions/download-artifact@v3
+        with:
+          name: react-absolute
+          path: .
+  publish:
+    needs: clear
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/download-artifact@v3
+        with:
+          name: react-abolute
+          path: .
+      - name: increment version
+        run: sudo npm version patch --no-git-tag-verion
+      - name: publish package
+        run: sudo npm publish
