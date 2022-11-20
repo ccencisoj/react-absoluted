@@ -2,7 +2,7 @@
 
 react-absolute es un envoltorio de react que **funciona como una combinación de position absolute y fixed**. 
 
-Los elementos con position absolute:
+Los x elementos con position absolute:
 - Generan scroll cuando el tamaño es mayor al viewport
 - Quedan fijos en la posición definida con respecto al padre
 
