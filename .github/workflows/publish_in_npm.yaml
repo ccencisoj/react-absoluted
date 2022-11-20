@@ -12,7 +12,7 @@ jobs:
         with: 
           node-version: 16
           registry-url: https://registry.npmjs.org
-      - run: rm -r docs
+      - run: rm -r .github docs src .gitignore babel.config.json
       - run: npm publish --no-git-tag-version
         env: 
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
