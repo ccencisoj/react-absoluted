@@ -1,9 +1,10 @@
 {
   "name": "react-absoluted",
-  "version": "1.1.7",
+  "version": "1.1.9",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
+    "publish": "npm version patch --no-git-tag-version && git add . && git commit -m \"new version\" && git push origin main",
     "build": "babel src --out-dir dist --copy-files"
   },
   "keywords": [
