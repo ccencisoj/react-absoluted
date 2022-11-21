@@ -1,16 +1,16 @@
 # React-Absoluted
 
-react-absolute es un envoltorio de react que **funciona como una combinación de position absolute y fixed**. 
+react-absolute is a react wrapper that **works like a combination of position absolute and fixed**
 
-Los elementos con position absolute:
-- Generan scroll cuando el tamaño es mayor al viewport
-- Quedan fijos en la posición definida con respecto al padre
+Elements with position absolute:
+- They generate scroll when the size is greater than the viewport
+- They are fixed in the defined position with respect to the parent
 
-Los elementos con position fixed:
-- No generan scroll cuando el tamaño es mayor al viewport
-- Quedan fijos en la posición definida con respecto al viewport
+Elements with position fixed:
+- They do not generate scroll when the size is greater than the viewport
+- They are fixed in the defined position with respect to the viewport
 
-Este envoltorio queda fijo en la posición definida con respecto al padre y no genera scroll cuando el tamaño es mayor al viewport. 
+This wrapper is fixed in the defined position with respect to the parent and does not generate a scroll when the size is greater than the viewport.
 
 ## Getting started
 
@@ -18,25 +18,25 @@ Este envoltorio queda fijo en la posición definida con respecto al padre y no g
 npm install react-absolute
 ```
 
-Importar Absoluted
+Import Absoluted
 
 ```jsx
 import Absoluted from 'react-absoluted';
 // ...
 ```
 
-Envolver los elementos
+Wrap the elementos
 ```jsx
 <Absoluted>
-  <img src="/images/bubble1.svg" alt="Una imagen con tamaño mayor al viewport"/>
+  <img src="/images/bubble1.svg" alt="Image with size greater than the viewport"/>
 </Absoluted>
 ```
 ## Example
-Imagen con position absolute.
+Image with position absolute.
 ![Bubble 1](https://github.com/ccencisoj/react-absoluted/blob/main/docs/images/bubble1.gif)
 
-Imagen con position fixed
+Image with position fixed
 ![Bubble 2](https://github.com/ccencisoj/react-absoluted/blob/main/docs/images/bubble2.gif)
 
-Imagen envuelta con Absoluted
+Image wrapped with Absoluted
 !["Bubble 3"](https://github.com/ccencisoj/react-absoluted/blob/main/docs/images/bubble3.gif)
