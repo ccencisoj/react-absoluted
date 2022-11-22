@@ -32,6 +32,7 @@ Wrap the elementos
 </Absoluted>
 ```
 ## Example
+**To understand the example look at the scroll**
 Image with position absolute.
 ![Bubble 1](https://github.com/ccencisoj/react-absoluted/blob/main/docs/images/bubble1.gif)
 
