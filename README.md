@@ -18,7 +18,7 @@ This wrapper is fixed in the defined position with respect to the parent and doe
 npm install react-absolute
 ```
 
-Import
+Import Absoluted
 
 ```jsx
 import Absoluted from 'react-absoluted';
